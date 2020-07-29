@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	background-color: #eee;
+}
+
+div.column {
+	width: 50%;
+	height: auto;
+	background-color: red;
+	margin-left: 25%;
+	padding-top: 1%;
+	text-align: center;
+}
+
+div.chat {
+	width: 100%;
+}
+
+div.section {
+	display: inline-table;
+	text-align: left;
+}
+
+div.left {
+	width: 30%;
+	background-color: green;
+}
+
+div.right {
+	width: 69%;
+	background-color: blue;
+}

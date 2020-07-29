@@ -1,0 +1,16 @@
+
+div.online ul {
+	list-style-type: none;
+}
+
+div.message div {
+	width: 100%;
+}
+
+div.message div.history {
+	height: 600px;
+}
+
+div.message div.bar textarea {
+	width: 100%;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/css/master.css" class="css">
+	<link rel="stylesheet" href="/static/css/chat.css">
+	<title>Chat</title>
+</head>
+<body>
+	<div class="column">
+		<h1>Chat</h1>
+		<div class="chat">
+			<div class="left section">
+				<div class="online">
+					<ul>
+						<li class="title">ONLINE</li>
+						<li class="me">{{ username }}</li>
+					</ul>
+				</div>
+				<div class="logout">
+					<a href="/logout">
+						<button id="logout">Logout</button>
+					</a>
+				</div>
+			</div>
+			<div class="right section">
+				<div class="message">
+					<div class="history">
+						HISTORY
+					</div>
+					<div class="bar">
+						<textarea name="message" id="message"></textarea>
+						<button id="send">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>Created by Ícaro Freire.</p>
+	</div>
+	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script src="/static/js/chat.js"></script>
+</body>
+</html>
