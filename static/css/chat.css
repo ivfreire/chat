@@ -3,14 +3,83 @@ div.online ul {
 	list-style-type: none;
 }
 
-div.message div {
+div.online ul li {
+	padding: 2%;
+	padding-left: 5%;
+	border: 1px solid transparent;
+	transition: transform 0.1s;
+}
+
+div.online ul li.user:hover {
+	background: white;
+	border-radius: 5px;
+	transform: scale(1.1);
+	box-shadow: #ddd 0 0 10px;
+}
+
+
+
+div.logout { margin-top: 5px; }
+div.logout button {
+	width: 100%;
+	background: white;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	padding: 7px 30px 7px 30px;
+	font-size: 16px;
+	transition: transform 0.1s;
+}
+div.logout button:hover {
+	background: #069;
+	color: white;
+	cursor: pointer;
+	transform: scale(1.1);
+	font-weight: bold;
+}
+
+
+
+
+div.messages div {
 	width: 100%;
 }
 
-div.message div.history {
+div.messages div.history {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	overflow-anchor: none;
 	height: 600px;
 }
 
-div.message div.bar textarea {
+div.messages div.history ul {
+	list-style-type: none;
+	overflow-anchor: auto;
+}
+
+div.messages div.history ul li {
+	
+}
+
+div.messages div.history ul li div.alert {
+	text-align: center;
+	color: #333;
+}
+
+div.messages div.history ul li div.username {
+	padding: 3px 0px 3px 10px ;
+}
+
+div.messages div.history ul li div.message {
 	width: 100%;
+	background-color: white;
+	border-radius: 5px;
+	padding: 2%;
+}
+
+div.messages div.message-bar textarea {
+	width: 96%;
+	border: hidden;
+	border-radius: 5px;
+	padding: 2%;
+	resize: none;
 }

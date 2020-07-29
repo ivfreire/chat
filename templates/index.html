@@ -13,9 +13,8 @@
 		<div class="chat">
 			<div class="left section">
 				<div class="online">
-					<ul>
+					<ul id="online">
 						<li class="title">ONLINE</li>
-						<li class="me">{{ username }}</li>
 					</ul>
 				</div>
 				<div class="logout">
@@ -25,13 +24,12 @@
 				</div>
 			</div>
 			<div class="right section">
-				<div class="message">
+				<div class="messages">
 					<div class="history">
-						HISTORY
+						<ul id="history"></ul>
 					</div>
-					<div class="bar">
+					<div class="message-bar">
 						<textarea name="message" id="message"></textarea>
-						<button id="send">Send</button>
 					</div>
 				</div>
 			</div>
@@ -39,6 +37,7 @@
 		<p>Created by Ícaro Freire.</p>
 	</div>
 	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script src="/static/js/socket.io.js"></script>
 	<script src="/static/js/chat.js"></script>
 </body>
 </html>

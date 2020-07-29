@@ -11,7 +11,7 @@ body {
 div.column {
 	width: 50%;
 	height: auto;
-	background-color: red;
+	background-color: transparent;
 	margin-left: 25%;
 	padding-top: 1%;
 	text-align: center;
@@ -28,10 +28,10 @@ div.section {
 
 div.left {
 	width: 30%;
-	background-color: green;
+	background-color: transparent;
 }
 
 div.right {
 	width: 69%;
-	background-color: blue;
+	background-color: transparent;
 }

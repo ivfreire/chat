@@ -1,7 +1,9 @@
 from flask import Flask, session, redirect, render_template, request, url_for
-app = Flask(__name__)
+from flask_socketio import SocketIO, emit
 
+app = Flask(__name__)
 app.secret_key = 'secret cat'
+io = SocketIO(app)
 
 @app.route('/')
 def index():
@@ -20,3 +22,21 @@ def logout():
 	if 'username' in session:
 		session.pop('username', None)
 	return redirect('/')
+
+
+@io.on('connect')
+def connect():
+	if 'username' in session:
+		emit('new-user', { 'username': session['username'] }, broadcast=True)
+
+@io.on('new-message')
+def receive(data):
+	if 'message' in data:
+		emit('new-message', {
+			'username': session['username'],
+			'message': data['message']
+		}, broadcast=True)
+
+@io.on('disconnect')
+def disconnect():
+	emit('remove-user', { 'username': session['username'] }, broadcast=True)
